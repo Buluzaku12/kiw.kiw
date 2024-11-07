@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="janjian-ngedate.css">
+    <title>Janjian Ngedate Bareng</title>
+</head>
+<body>
+    <div class="date-container">
+        <h1>Janjian Ngedate Bareng! 🌹</h1>
+        <p>Setiap detik bersamamu adalah keajaiban.</p>
+        <p>Aku ingin kita menjelajahi dunia ini bersama, satu langkah demi satu langkah.</p>
+        <p>Bagaimana kalau kita pergi ke tempat yang indah dan menciptakan kenangan yang tak terlupakan?</p>
+        <p>Jadwalkan waktu kita, dan biarkan cinta kita tumbuh seiring berjalannya waktu.</p>
+        
+        <label for="datePicker">Pilih Tanggal Ngedate:</label>
+        <input type="date" id="datePicker">
+        <button id="scheduleButton">Jadwalkan</button>
+        
+        <p id="confirmationMessage" style="margin-top: 20px; font-weight: bold;"></p>
+    </div>
+
+    <script>
+        document.getElementById("scheduleButton").addEventListener("click", function() {
+            const datePicker = document.getElementById("datePicker").value;
+            const confirmationMessage = document.getElementById("confirmationMessage");
+            
+            if (datePicker) {
+                alert("Sampai ketemu nanti, cantik! 😊");
+                confirmationMessage.textContent = `Sampai ketemu, jangan sampai lupa  ${datePicker}!`;
+            } else {
+                alert("Silakan pilih tanggal terlebih dahulu.");
+                confirmationMessage.textContent = ''; // Clear the message if no date is selected
+            }
+        });
+    </script>
+</body>
+</html>
